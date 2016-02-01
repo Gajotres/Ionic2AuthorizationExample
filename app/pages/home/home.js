@@ -10,15 +10,15 @@ import { FormPage } from '../form/form';
 export class HomePage {
 
 	constructor(nav: NavController, navParams: NavParams) {
-	    this.nav = nav;
-	    this.username = window.localStorage.getItem('username');   
+	  this.nav = nav;
+	  this.username = window.localStorage.getItem('username');   
 	}
 
 	logout(): void { 
-    	window.localStorage.removeItem('username');
-    	window.localStorage.removeItem('password');
+  	window.localStorage.removeItem('username');
+  	window.localStorage.removeItem('password');
 
 		this.nav.setRoot(FormPage);
-	    this.nav.popToRoot();   
+	  this.nav.popToRoot();   
 	} 
 }
